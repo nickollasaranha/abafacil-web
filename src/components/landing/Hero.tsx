@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-illustration.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen pt-20 overflow-hidden bg-gradient-soft">
+    <section className="relative pt-20 overflow-hidden bg-gradient-soft">
       {/* Background decorations */}
       <div className="absolute top-40 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-pulse-soft" />
       
-      <div className="container mx-auto px-4 py-16 md:py-24">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
@@ -30,10 +31,12 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <Button variant="hero" size="xl">
-                Começar Grátis
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+              <Link to="/planos">
+                <Button variant="hero" size="xl">
+                  Usar na minha unidade
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
               <Button variant="outline" size="xl">
                 <Play className="w-5 h-5" />
                 Ver Demonstração
@@ -55,7 +58,7 @@ const Hero = () => {
                   ))}
                 </div>
                 <div className="text-left">
-                  <p className="font-display font-bold text-foreground">+2.500</p>
+                  <p className="font-display font-bold text-foreground">+200</p>
                   <p className="text-sm text-muted-foreground">Profissionais ativos</p>
                 </div>
               </div>

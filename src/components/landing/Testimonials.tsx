@@ -1,23 +1,29 @@
 import { Star, Quote } from "lucide-react";
+import dardaniaImg from "@/assets/person/dardania.jpg";
+import carolinaImg from "@/assets/person/carolina.jpg";
+import stephanieImg from "@/assets/person/stephanie.png";
 
 const testimonials = [
   {
-    name: "Dra. Mariana Silva",
+    name: "Dardânia Mylana",
     role: "Psicóloga Especialista em ABA",
     content: "O Aba Fácil transformou a forma como organizo os dados dos meus pacientes. Consigo ver o progresso de forma muito mais clara e os pais adoram os relatórios visuais.",
     rating: 5,
+    image: dardaniaImg
   },
   {
-    name: "Roberto Mendes",
-    role: "Pai de paciente",
+    name: "Carolina Firmo",
+    role: "Mãe de paciente",
     content: "Finalmente posso acompanhar o desenvolvimento do meu filho de forma organizada. A comunicação com os terapeutas ficou muito mais fácil e transparente.",
     rating: 5,
+    image: carolinaImg
   },
   {
-    name: "Ana Paula Costa",
+    name: "Stefanie Pinho",
     role: "Terapeuta Ocupacional",
     content: "Interface super intuitiva! Economizo muito tempo no registro das sessões e ainda consigo compartilhar informações importantes com a equipe multidisciplinar.",
     rating: 5,
+    image: stephanieImg
   },
 ];
 
@@ -44,7 +50,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative p-8 rounded-2xl bg-gradient-card border border-border/50 shadow-card hover:shadow-hover transition-all duration-300"
+              className="relative p-8 rounded-2xl bg-gradient-card border border-border/50 shadow-card hover:shadow-hover transition-all duration-300 flex flex-col"
             >
               {/* Quote icon */}
               <div className="absolute -top-4 left-8">
@@ -66,8 +72,16 @@ const Testimonials = () => {
               </p>
               
               {/* Author */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-warm" />
+              <div className="flex items-center gap-4 mt-auto">
+                {testimonial.image ? (
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name} 
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-gradient-warm" />
+                )}
                 <div>
                   <p className="font-display font-bold text-foreground">
                     {testimonial.name}

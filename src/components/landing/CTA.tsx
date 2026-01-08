@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -13,9 +14,7 @@ const CTA = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-foreground/20 mb-8">
-            <Heart className="w-8 h-8 text-primary-foreground" />
-          </div>
+          <img src="/logo.png" alt="Aba Fácil" className="inline-block w-16 h-16 rounded-full object-cover mb-8" />
           
           <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-primary-foreground mb-6">
             Comece a transformar o acompanhamento hoje
@@ -27,17 +26,19 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="heroOutline" size="xl">
-              Começar Grátis
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+            <Link to="/planos">
+              <Button variant="heroOutline" size="xl">
+                Usar na minha unidade
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
             <Button variant="heroOutline" size="xl">
               Falar com Especialista
             </Button>
           </div>
           
           <p className="text-sm text-primary-foreground/60 mt-8">
-            Sem cartão de crédito • Teste grátis por 14 dias • Cancele quando quiser
+            Veja planos específicos para sua unidade. Disponível para todo o Brasil.
           </p>
         </div>
       </div>

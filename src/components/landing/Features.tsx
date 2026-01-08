@@ -14,7 +14,7 @@ const features = [
   {
     icon: Calendar,
     title: "Agenda Integrada",
-    description: "Organize consultas, lembretes de medicação e eventos importantes em um só lugar.",
+    description: "Mande recados de eventos, compromissos e lembretes importantes em um só lugar.",
   },
   {
     icon: Users,

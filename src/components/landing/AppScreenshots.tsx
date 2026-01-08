@@ -2,9 +2,10 @@ import { useState } from "react";
 
 import screenshotHome from "@/assets/screenshots/app-home.png";
 import screenshotSpecialties from "@/assets/screenshots/app-specialties.png";
-import screenshotLogin from "@/assets/screenshots/app-login.png";
 import screenshotDocument from "@/assets/screenshots/app-document.png";
 import screenshotPatient from "@/assets/screenshots/app-patient.png";
+import screenshotAgenda from "@/assets/screenshots/app-agenda.jpeg";
+import screenshotGraphics from "@/assets/screenshots/app-graphics.jpeg";
 
 const screenshots = [
   {
@@ -21,29 +22,35 @@ const screenshots = [
   },
   {
     id: 3,
-    image: screenshotLogin,
-    title: "Login Seguro",
-    description: "Acesso seguro e protegido para todos os profissionais",
+    image: screenshotAgenda,
+    title: "Agenda",
+    description: "Envie e receba recados importantes entre terapeutas e pais",
   },
   {
     id: 4,
+    image: screenshotGraphics,
+    title: "Gráficos",
+    description: "Visualize o progresso dos pacientes com gráficos detalhados",
+  },  
+  {
+    id: 5,
     image: screenshotDocument,
     title: "Documentos",
     description: "Adicione e organize documentos importantes dos pacientes",
   },
   {
-    id: 5,
+    id: 6,
     image: screenshotPatient,
     title: "Dados do Paciente",
     description: "Informações completas e organizadas de cada paciente",
-  },
+  }
 ];
 
 const AppScreenshots = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="app" className="py-20 bg-gradient-soft overflow-hidden">
+    <section id="conheca-o-app" className="py-20 bg-gradient-soft overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
